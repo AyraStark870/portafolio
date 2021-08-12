@@ -1,14 +1,19 @@
 const boton = document.querySelector('.boton');
-const miDiv = document.querySelector('.js');
+const formulario = document.querySelector('.form');
 
 boton.addEventListener('click', submitForm)
 
 function submitForm(e){
   e.preventDefault()
+  const spinner = document.querySelector('.spinner');
+  spinner.style.display = 'flex';
+  formulario.reset()
 
-  const parrafo = document.createElement('p');
-  parrafo.textContent = 'Felicidades'
-  miDiv.classList.add('msj')
-  miDiv.appendChild(parrafo)
+
+  setTimeout(() => {
+    spinner.style.display = 'none';
+  }, 3000);
+
+
 
 }

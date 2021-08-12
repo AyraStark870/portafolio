@@ -161,6 +161,7 @@ img{
   font-weight: bold;
   padding: 1rem 1.5rem;
   margin-top: 1.5rem;
+  width: 10rem;
 
 }
 .boton:hover{
@@ -222,12 +223,16 @@ font-size: 3rem;
 }
 /* NOSOTROS */
 .container{
-  margin-top: 2rem;
+  margin-top: 1rem;
   position: relative;
+  background-image: url(https://static.hussle.com/gym_img/480x280/104829/gym/104829.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60rem;
 
 
 }
-.container img{
+/* .container img{
   height:50rem;
   width: 80%;
   margin: 0 auto;
@@ -235,32 +240,53 @@ font-size: 3rem;
   /* margin-left:10%;
   margin-right:10%; */
 
+
+.container-opacity{
+  background-color: rgba(0,0,0,0.5);
+  height: 100%;
 }
-
-.subcontainer{
+.container-text{
   position: absolute;
+  padding-left: 3rem;
+  padding-right: 3rem;
 
-  margin-right: 15%;
-  margin-left: 15%;
   margin-top: 18rem ;
+  color: var(--primario);
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  padding-top: 15rem;
+  line-height: 3rem;
 }
 @media (min-width:867px) {
-  .subcontainer{
-    margin-right: 30%;
-    /* margin-left: 20%; */
-    margin-top: 20rem;
+  .container-text{
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 6rem;
     /* margin-left: 25rem; */
-
+   line-height: 4.5rem;
     font-size: 3rem;
   }
 
 
 }
-.subcontainer p{
-  color: var(--primario);
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
-  line-height: 3rem;
+
+.spinner {
+  border: 6px solid rgba(229, 190, 1, 0.7);
+  border-left-color: transparent;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+
+  animation: spin 1s linear infinite;
+
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
